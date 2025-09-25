@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iKout Bot</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #000000, #4b0000);
+            color: #fff;
+        }
+        header {
+            text-align: center;
+            padding: 50px 20px;
+        }
+        h1 {
+            font-size: 3em;
+            margin: 0;
+            color: #ff0000;
+        }
+        p {
+            font-size: 1.2em;
+            margin-top: 10px;
+            color: #ccc;
+        }
+        .btn {
+            display: inline-block;
+            margin: 10px;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            color: #fff;
+            background: linear-gradient(45deg, #ff0000, #550000);
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px #ff0000;
+        }
+        section {
+            padding: 50px 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+        h2 {
+            color: #ff0000;
+            margin-bottom: 20px;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            background: rgba(255, 0, 0, 0.1);
+            margin: 10px 0;
+            padding: 15px 20px;
+            border-radius: 8px;
+            transition: background 0.2s;
+        }
+        li:hover {
+            background: rgba(255, 0, 0, 0.2);
+        }
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            color: #777;
+            font-size: 0.9em;
+        }
+        .audio-controls {
+            text-align: center;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>iKout Bot</h1>
+        <p>أفضل بوت ديسكورد لتشغيل الأغاني والتحكم الكامل بصوت السيرفر</p>
+        <a href="https://discord.com/oauth2/authorize?client_id=1398796271606566933&scope=bot&permissions=8" class="btn">Add to Discord</a>
+
+        <!-- الأغنية تحت زر Add to Discord -->
+        <div class="audio-controls">
+            <audio id="bgMusic" autoplay loop controls>
+                <source src="https://www.dropbox.com/scl/fi/2f5kxyzeymqfhmm4nuwof/The-Rains-of-Castamere-Red-Wedding-Version-XXX.mp3?dl=1" type="audio/mpeg">
+                متصفحك لا يدعم تشغيل الصوت.
+            </audio>
+        </div>
+    </header>
+
+    <section>
+        <h2>ميزات البوت</h2>
+        <ul>
+            <li>تشغيل أغاني من يوتيوب مباشرة</li>
+            <li>قائمة انتظار للأغاني</li>
+            <li>أوامر /دخول و /خروج و /تشغيل و /تخطي و /ايقاف</li>
+            <li>واجهة سهلة ومبسطة للمستخدمين</li>
+            <li>تحديث مستمر للميزات</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>الأوامر المتاحة</h2>
+        <ul>
+            <li>/مساعدة - عرض قائمة الأوامر</li>
+            <li>/تشغيل [رابط يوتيوب] - لتشغيل الأغنية</li>
+            <li>/دخول - لدخول الغرفة الصوتية</li>
+            <li>/خروج - للخروج من الغرفة</li>
+            <li>/تخطي - لتخطي الأغنية الحالية</li>
+            <li>/ايقاف - لإيقاف التشغيل ومسح قائمة الانتظار</li>
+        </ul>
+    </section>
+
+    <footer>
+        &copy; 2025 iKout Bot. جميع الحقوق محفوظة.
+    </footer>
+
+    <script>
+        // رفع الصوت تلقائياً إلى 100%
+        const audio = document.getElementById('bgMusic');
+        audio.volume = 1.0;
+    </script>
+</body>
+</html>
