@@ -85,7 +85,7 @@
 
         <!-- الأغنية تحت زر Add to Discord -->
         <div class="audio-controls">
-            <audio id="bgMusic" autoplay loop controls>
+            <audio id="bgMusic" loop controls>
                 <source src="https://www.dropbox.com/scl/fi/2f5kxyzeymqfhmm4nuwof/The-Rains-of-Castamere-Red-Wedding-Version-XXX.mp3?dl=1" type="audio/mpeg">
                 متصفحك لا يدعم تشغيل الصوت.
             </audio>
@@ -120,9 +120,20 @@
     </footer>
 
     <script>
-        // رفع الصوت تلقائياً إلى 100%
         const audio = document.getElementById('bgMusic');
         audio.volume = 1.0;
+
+        // تشغيل الصوت عند أول تفاعل للمستخدم
+        function initAudio() {
+            audio.play().catch(() => {
+                console.log("تحتاج لتفاعل المستخدم لتشغيل الصوت");
+            });
+            document.removeEventListener('click', initAudio);
+            document.removeEventListener('touchstart', initAudio);
+        }
+
+        document.addEventListener('click', initAudio);
+        document.addEventListener('touchstart', initAudio);
     </script>
 </body>
 </html>
